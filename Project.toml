@@ -1,0 +1,17 @@
+name = "aoc2024"
+uuid = "5881966f-8e63-48fd-9f5a-fa9f90364a28"
+authors = ["GeorgePopp <email hidden>"]
+version = "0.1.0"
+
+[deps]
+InlineTest = "bd334432-b1e7-49c7-a2dc-dd9149e4ebd6"
+
+[compat]
+InlineTest = "0.2.0"
+ReTest = "0.3.3"
+
+[extras]
+ReTest = "e0db7c4e-2690-44b9-bad6-7687da720f89"
+
+[targets]
+test = ["ReTest"]
