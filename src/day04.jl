@@ -38,7 +38,6 @@ function parse1(io::IO)
             a[i,j] = s_vec[i][j]
         end
     end
-    #println(a)
     return a
 end
 
@@ -138,25 +137,19 @@ function search_all_directions(pos, a)
         test_idx_right_up
     ]
     res = 0
-    #println(test_vec)
 
     for test in test_vec
         # Check that the coordinates fit in a
         valid_coords = all(map(x -> valid_index(x, ncol, nrow), test))
         if !valid_coords
-            #println("Invalid:")
-            #println(test)
             continue
         end
 
         # Check that they spell XMAS
         char_vec = a[test]
-        #print(char_vec)
         pass = (char_vec == correct_vec)
         res += pass
     end
-    #println(pos)
-    #println(res)
     return res
 end
 
