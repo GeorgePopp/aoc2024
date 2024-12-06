@@ -13,3 +13,9 @@ For the second part, I used regex to split the string. In hindsight I could have
 My solution used CatesianCoordinates to search for the correct strings. It isn't a very elegant solution but it works. Becuase of this, I actually found the second part easier.
 
 A fancier solution would have involved flipping / rotating / reflecting the array, but wasn't worth the headaches.
+
+# Day 05
+
+For part 1 I was tempted to break the loop once an error was found for speed. 
+
+For part 2 I wrote some functions to change values inplace `correct_with_rule!()` and `correct_order!()`, I'm quite happy with these as they don't do any stack allocations so are reasonably fast - the heap variables may even get compiled away.
