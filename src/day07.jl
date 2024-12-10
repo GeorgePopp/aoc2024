@@ -52,7 +52,7 @@ end
 
 # Part 2
 function concatdigits(a::Integer, b::Integer)
-    return trunc(Int64, a * 10^(trunc(log10(b))+1) + b)
+    return trunc(Int64, a * 10^ndigits(b) + b)
 end
 
 

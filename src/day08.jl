@@ -64,6 +64,8 @@ end
 
 @inline function isingrid(idx::CartesianIndex, nrow::Integer, ncol::Integer)
     return (1<= idx[1] <= ncol) & (1 <= idx[2] <= nrow)
+    # Alternatively
+    #checkbounds(Bool, a, idx[1], idx[2])
 end
 
 #println(solve1(IOBuffer(TEST_STRING))) #14
@@ -100,7 +102,7 @@ function solve2(io::IO)
                 loc1 = locs[i]
                 loc2 = locs[j]
                 valid_antinode_locs = reflect_and_repeat(loc1, loc2, nrow, ncol)
-                for loc in  valid_antinode_locs
+                for loc in valid_antinode_locs
                     antinode_array[loc] = true
                 end
             end
@@ -109,6 +111,6 @@ function solve2(io::IO)
     return sum(antinode_array)
 end
 
-#println(solve2(IOBuffer(TEST_STRING))) #34
+println(solve2(IOBuffer(TEST_STRING))) #34
 
 end
