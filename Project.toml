@@ -5,9 +5,11 @@ version = "0.1.0"
 
 [deps]
 InlineTest = "bd334432-b1e7-49c7-a2dc-dd9149e4ebd6"
+Memoization = "6fafb56a-5788-4b4e-91ca-c0cea6611c73"
 
 [compat]
 InlineTest = "0.2.0"
+Memoization = "0.2.2"
 ReTest = "0.3.3"
 
 [extras]
